@@ -1,0 +1,100 @@
+/*SCSS Style sheet of the Responsive JavaScript Cookie Notification Banner by Fabian Lins*/
+/*!IMPORTANT: You need to compile the SCSS style sheet to a CSS style sheet.*/
+
+/*Font*/
+
+/*The font is declared in the p#cookie_note_text selector. If your font is declared in a parent div feel free to delete the attribute and variable.*/
+    $cookie_note_font: sans-serif;
+/*Colors*/
+
+/*The property of the colors is declared as background, NOT as background-color!*/
+/*This means you can use hex codes (like in the example) but you can also make use of rgb(a) and gradients.*/
+
+    /*cookie_note (box background and font) colors*/
+
+    $cookie_note_background_color: #006f9e;
+    $cookie_note_font_color: white;
+
+    /*cookie_note_ok_button (box background and font) colors*/
+
+        /*TIP! You can use the color as the $cookie_note_font_color.*/
+    $cookie_note_ok_button_background_color:$cookie_note_font_color;
+        /*TIP! You can use the color as the $cookie_note_background_color.*/
+    $cookie_note_ok_button_font_color:$cookie_note_background_color;
+
+    /*cookie_note_button (box background and font) colors*/
+        /*Applies to any other button than the ok button*/
+
+    $cookie_note_button_background_color:#83d0f5;
+        /*TIP! You can use the color as the $cookie_note_background_color.*/
+    $cookie_note_button_font_color:$cookie_note_background_color;
+
+
+/*Sizes*/
+
+    /*cookie_note sizes*/
+
+    $cookie_note_font_size: 16px;
+    $cookie_note_box_padding:15px;
+
+    /*cookie_button sizes*/
+
+        /*TIP! You can use the same as the $cookie_note_font_size.*/
+    $cookie_note_button_font-size:$cookie_note_font_size;
+    $cookie_note_button_margin:10px;
+    $cookie_note_button_padding:5px;
+    $cookie_note_button_border_radius:3px;
+    $cookie_note_button_min_width:40px;
+
+    $cookie_note_transition:0.15s;
+    $cookie_note_hover_opacity:0.5;
+
+.cookie_note_hide{
+    display:none;
+}
+
+#cookie_note_box{
+    background:$cookie_note_background_color;
+    position:fixed;
+    width:100%;
+    top: 100%;
+    transform: translateY(-100%);
+    z-index: 1003!important;
+}
+
+#cookie_note_content{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+p#cookie_note_text{
+    font-size:$cookie_note_font_size;
+    padding:$cookie_note_box_padding!important;
+    color: $cookie_note_font_color;
+}
+
+.cookie_note_button{
+    margin:$cookie_note_button_margin!important;
+    padding: $cookie_note_button_padding!important;
+    border-radius:$cookie_note_button_border_radius;
+    border:0;
+    cursor: pointer;
+    min-width: $cookie_note_button_min_width;
+    font-size:$cookie_note_button_font-size;
+    &:hover,&:focus{
+        opacity:$cookie_note_hover_opacity;
+        transition:$cookie_note_transition;
+    }
+}
+
+.cookie_note_ok_button{
+    background: $cookie_note_ok_button_background_color!important;
+    color: $cookie_note_ok_button_font_color!important;
+}
+
+.cookie_reject_button, .cookie_note_button{
+    background:$cookie_note_button_background_color;
+    color:$cookie_note_button_font_color;
+}
