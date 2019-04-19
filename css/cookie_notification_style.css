@@ -1,0 +1,50 @@
+.cookie_note_hide {
+  display: none;
+}
+
+#cookie_note_box {
+  background: #006f9e;
+  position: fixed;
+  width: 100%;
+  top: 100%;
+  transform: translateY(-100%);
+  z-index: 1003 !important;
+}
+
+#cookie_note_content {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+p#cookie_note_text {
+  font-size: 16px;
+  padding: 15px !important;
+  color: white;
+}
+
+.cookie_note_button {
+  margin: 10px !important;
+  padding: 5px !important;
+  border-radius: 3px;
+  border: 0;
+  cursor: pointer;
+  min-width: 40px;
+  font-size: 16px;
+}
+
+.cookie_note_button:hover, .cookie_note_button:focus {
+  opacity: 0.5;
+  transition: 0.15s;
+}
+
+.cookie_note_ok_button {
+  background: white !important;
+  color: #006f9e !important;
+}
+
+.cookie_reject_button, .cookie_note_button {
+  background: #83d0f5;
+  color: #006f9e;
+}
