@@ -2,7 +2,7 @@
 This is the jQuery version of my Cookie Banner Notification. There is also a Vanilla JavaScript version of this available:
 https://github.com/FabianLins/cookie_banner_js
 
-To use this Flyout Menu, you have to do a few things:
+To use this Cookie Banner, you have to do a few things:
 
 # How does it work?
 - I have used flex boxes for this banner.
@@ -10,7 +10,7 @@ To use this Flyout Menu, you have to do a few things:
 - If you hit ok, a cookie is set.
 - If you click on reject, you get redirected (default is Google).
 
-# Instructions
+# Instruction
 1. Link the "cookie_notification_style.css" file.
 2. Link the current jQuery library (in this case: "jquery-3.3.1.min.js").
   NOTE: Always check for a later version on https://jquery.com/download/
